@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="outer-body">
+        <form name="form">
+            <div id="display">
+                <input type="text" name="displayResult" placeholder="0">
+            </div>
+            <div id="numpad">
+                <div class="row">
+                    <input class="btn" type="button" name="b7" value="7" onclick="func(b7.value)">
+                    <input class="btn" type="button" name="b8" value="8" onclick="func(b8.value)">
+                    <input class="btn" type="button" name="b9" value="9" onclick="func(b9.value)">
+                    <input class="btn-symb" type="button" name="add" value="+" onclick="func(add.value)">
+                </div>
+                <div class="row">
+                    <input class="btn" type="button" name="b4" value="4" onclick="func(b4.value)">
+                    <input class="btn" type="button" name="b5" value="5" onclick="func(b5.value)">
+                    <input class="btn" type="button" name="b6" value="6" onclick="func(b6.value)">
+                    <input class="btn-symb" type="button" name="minus" value="-" onclick="func(minus.value)">
+                </div>
+                <div class="row">
+                    <input class="btn" type="button" name="b1" value="1" onclick="func(b1.value)">
+                    <input class="btn" type="button" name="b2" value="2" onclick="func(b2.value)">
+                    <input class="btn" type="button" name="b3" value="3" onclick="func(b3.value)">
+                    <input class="btn-symb" type="button" name="mul" value="*" onclick="func(mul.value)">
+                </div>
+                <div class="row">
+                    <input class="btn" type="button" name="b0" value="0" onclick="func(b0.value)">
+                    <input class="btn-symb" type="button" name="dot" value="." onclick="func(dot.value)">
+                    <input class="btn-symb" type="button" name="divide" value="/" onclick="func(divide.value)">
+                    <input class="btn-symb" type="reset" value="C">
+                </div>
+            </div>
+            <input class="btn-clear" type="button" value="=" onclick="displayResult.value=eval(displayResult.value)">
+        </form>
+    </div>
+    <script>
+        function func(result) {
+            form.displayResult.value = form.displayResult.value + result;
+            console.log(result);
+        }
+    </script>
+</body>
+
+</html>
